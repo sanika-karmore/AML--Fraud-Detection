@@ -115,20 +115,6 @@ Final Risk Score = 0.4 × Rule Score + 0.4 × ML Probability + 0.2 × Anomaly Sc
 - **ROC-AUC:** Overall model performance
 - **Alert Volume:** Manageable workload for analysts
 
-## Banking Insights
-
-> **Regulatory Compliance:** ML models support AML analysts but do not replace regulatory rules.
-
-> **Explainability Required:** Regulatory compliance requires explainable AI decisions — no black-box models.
-
-> **False Positive Cost:** Banks prioritize precision to reduce analyst burden and customer friction.
-
-## Resume Bullet Points
-
-- Built an end-to-end AML fraud detection system using rule-based logic and ML models, improving suspicious transaction detection accuracy by 28%
-- Developed customer risk scoring framework combining AML rules, supervised ML, and anomaly detection
-- Designed executive AML dashboards to monitor fraud trends and compliance alerts
-- Applied explainable AI techniques (feature importance, SHAP) to support regulatory transparency
 
 ## Future Enhancements
 
@@ -140,4 +126,5 @@ Final Risk Score = 0.4 × Rule Score + 0.4 × ML Probability + 0.2 × Anomaly Sc
 
 **Status:** Under Development
 **Last Updated:** January 2026
+
 
