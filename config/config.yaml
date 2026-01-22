@@ -1,0 +1,171 @@
+# AML Fraud Detection Configuration
+
+# Paths
+paths:
+  raw_data: "data/raw/"
+  processed_data: "data/processed/"
+  models: "models/"
+  reports: "reports/"
+  dashboards: "dashboards/"
+
+# Data Sources
+data:
+  # IEEE-CIS Fraud Detection or PaySim
+  source: "IEEE-CIS"
+  train_file: "train_transaction.csv"
+  test_file: "test_transaction.csv"
+  identity_file: "train_identity.csv"
+
+# Feature Engineering
+features:
+  # Transaction-level features
+  transaction_features:
+    - transaction_amount
+    - transaction_hour
+    - transaction_day
+    - transaction_month
+    - amount_deviation
+    - velocity_1h
+    - velocity_24h
+    
+  # Customer-level features
+  customer_features:
+    - avg_transaction_amount
+    - total_transactions
+    - high_risk_merchant_count
+    - international_txn_pct
+    - device_count
+    
+  # Categorical encodings
+  encoding_method: "target"  # Options: target, onehot, label
+
+# Rule-Based AML Detection
+aml_rules:
+  # Amount-based rules
+  amount_threshold_multiplier: 3.0  # x times customer avg
+  large_transaction_threshold: 10000
+  round_number_pattern: [1000, 5000, 10000, 50000, 100000]
+  
+  # Velocity rules
+  max_transactions_per_hour: 5
+  max_transactions_per_day: 20
+  
+  # Geographic rules
+  cross_border_flag: true
+  high_risk_countries: ["XX", "YY"]  # ISO codes
+  
+  # Device and channel
+  new_device_threshold_days: 30
+  unusual_hour_range: [0, 6]  # 12 AM to 6 AM
+  
+  # Risk scoring weights
+  rule_weights:
+    amount_anomaly: 0.25
+    velocity_breach: 0.25
+    geographic_risk: 0.20
+    round_number: 0.10
+    device_anomaly: 0.10
+    time_anomaly: 0.10
+
+# ML Models Configuration
+ml_models:
+  # Random Forest
+  random_forest:
+    n_estimators: 200
+    max_depth: 15
+    min_samples_split: 100
+    min_samples_leaf: 50
+    class_weight: "balanced"
+    random_state: 42
+    
+  # XGBoost
+  xgboost:
+    n_estimators: 200
+    max_depth: 6
+    learning_rate: 0.05
+    subsample: 0.8
+    colsample_bytree: 0.8
+    scale_pos_weight: 10  # Adjust for imbalanced data
+    random_state: 42
+    
+  # Logistic Regression (Baseline)
+  logistic_regression:
+    C: 1.0
+    max_iter: 1000
+    class_weight: "balanced"
+    random_state: 42
+    
+  # Isolation Forest (Anomaly Detection)
+  isolation_forest:
+    n_estimators: 100
+    contamination: 0.01  # Expected fraud rate
+    random_state: 42
+    
+  # DBSCAN (Clustering)
+  dbscan:
+    eps: 0.5
+    min_samples: 5
+    metric: "euclidean"
+
+# Risk Scoring
+risk_scoring:
+  # Component weights
+  weights:
+    rule_score: 0.4
+    ml_probability: 0.4
+    anomaly_score: 0.2
+    
+  # Thresholds
+  thresholds:
+    high_risk: 0.7
+    medium_risk: 0.4
+    low_risk: 0.0
+
+# Model Evaluation
+evaluation:
+  # Metrics to track
+  metrics:
+    - precision
+    - recall
+    - f1_score
+    - roc_auc
+    - average_precision
+    
+  # Cross-validation
+  cv_folds: 5
+  
+  # Test split
+  test_size: 0.2
+  validation_size: 0.1
+
+# Explainability
+explainability:
+  # SHAP configuration
+  shap_samples: 1000  # Number of samples for SHAP calculation
+  top_features: 20    # Top features to display
+  
+  # Feature importance
+  plot_top_n: 15
+
+# Dashboard Configuration
+dashboard:
+  refresh_rate: "daily"
+  alert_threshold: 0.7  # High risk threshold
+  top_n_customers: 100  # Top risky customers to display
+
+# Reporting
+reporting:
+  # SAR (Suspicious Activity Report)
+  sar_threshold: 0.8
+  min_transaction_count: 3
+  
+  # Performance reports
+  generate_html: true
+  include_plots: true
+
+# Production Settings
+production:
+  model_version: "v1.0"
+  model_registry: "models/production/"
+  log_predictions: true
+  monitoring_enabled: true
