@@ -1,0 +1,98 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# PyCharm
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Data Files (Large)
+data/raw/*.csv
+data/raw/*.zip
+data/raw/*.json
+data/processed/*.csv
+*.h5
+*.hdf5
+
+# Models (Large)
+models/*.pkl
+models/*.h5
+models/*.joblib
+*.model
+
+# Logs
+*.log
+logs/
+*.out
+
+# Reports (Generated)
+reports/*.html
+reports/*.pdf
+reports/*.csv
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Credentials
+.env
+.kaggle/
+kaggle.json
+credentials.json
+config/secrets.yaml
+
+# Outputs
+outputs/
+results/
+experiments/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Keep structure but ignore contents
+data/raw/.gitkeep
+data/processed/.gitkeep
+models/.gitkeep
+reports/.gitkeep
