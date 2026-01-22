@@ -1,16 +1,16 @@
-# 🏦 AML / Fraud Detection using AI & ML
+# AML / Fraud Detection using AI & ML
 
-**Bank-Grade Financial Crime Analytics Project**
+**Financial Analytics Project**
 
-## 📋 Project Overview
+## Project Overview
 
 This project implements an end-to-end Anti-Money Laundering (AML) and fraud detection system using rule-based compliance logic, supervised machine learning, and unsupervised anomaly detection — exactly as implemented in tier-1 financial institutions.
 
-## 🎯 Business Problem
+## Business Problem
 
 Banks must detect suspicious transactions in real time to prevent money laundering and financial fraud while minimizing false positives that burden compliance teams and impact customer experience.
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 Raw Transactions → Data Cleaning → Feature Engineering
@@ -20,7 +20,7 @@ Raw Transactions → Data Cleaning → Feature Engineering
 → Dashboard & SAR Report
 ```
 
-## 📊 Dataset
+## Dataset
 
 - **IEEE-CIS Fraud Detection** (Kaggle)
 - **PaySim Synthetic Financial Dataset**
@@ -33,7 +33,7 @@ Raw Transactions → Data Cleaning → Feature Engineering
 - **Visualization:** Power BI / Tableau / Plotly
 - **AI Explainability:** SHAP
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 AML/
@@ -66,7 +66,7 @@ AML/
 └── README.md                      # This file
 ```
 
-## 🚀 Key Features
+## Key Features
 
 ### 1. Rule-Based AML Detection
 - Transaction amount anomalies
@@ -108,14 +108,14 @@ Final Risk Score = 0.4 × Rule Score + 0.4 × ML Probability + 0.2 × Anomaly Sc
 - Risk distribution
 - Customer drill-down
 
-## 📈 Results & Metrics
+## Results & Metrics
 
 - **Precision:** Focus on minimizing false positives
 - **Recall:** Capturing actual suspicious activity
 - **ROC-AUC:** Overall model performance
 - **Alert Volume:** Manageable workload for analysts
 
-## 🎓 Banking Insights
+## Banking Insights
 
 > **Regulatory Compliance:** ML models support AML analysts but do not replace regulatory rules.
 
@@ -123,14 +123,14 @@ Final Risk Score = 0.4 × Rule Score + 0.4 × ML Probability + 0.2 × Anomaly Sc
 
 > **False Positive Cost:** Banks prioritize precision to reduce analyst burden and customer friction.
 
-## 💼 Resume Bullet Points
+## Resume Bullet Points
 
 - Built an end-to-end AML fraud detection system using rule-based logic and ML models, improving suspicious transaction detection accuracy by 28%
 - Developed customer risk scoring framework combining AML rules, supervised ML, and anomaly detection
 - Designed executive AML dashboards to monitor fraud trends and compliance alerts
 - Applied explainable AI techniques (feature importance, SHAP) to support regulatory transparency
 
-## 📝 Future Enhancements
+## Future Enhancements
 
 - Real-time streaming detection
 - Network analysis for transaction patterns
@@ -140,3 +140,4 @@ Final Risk Score = 0.4 × Rule Score + 0.4 × ML Probability + 0.2 × Anomaly Sc
 
 **Status:** Under Development
 **Last Updated:** January 2026
+
