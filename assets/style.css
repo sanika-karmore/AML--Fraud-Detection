@@ -1,0 +1,272 @@
+body {
+  font-family: 'Inter', 'Montserrat', Arial, sans-serif;
+  /* Header Flex Layout */
+  .header-flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2rem 2.5vw 1.5rem 2.5vw;
+    background: linear-gradient(90deg, #6a0572 0%, #ab218b 50%, #1a1a2e 100%);
+    color: #fff;
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  }
+  .header-left h1 {
+    margin: 0 0 0.2rem 0;
+    font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+  }
+  .header-sub {
+    font-size: 1.15rem;
+    color: #ffb3f6;
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 500;
+    margin-top: 0.2rem;
+  }
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.3rem;
+    margin-top: 0.2rem;
+  }
+  .header-contact {
+    display: flex;
+    gap: 0.7rem;
+    font-size: 1.05rem;
+    color: #fff;
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 500;
+  }
+  .header-contact a.contact-link {
+    color: #ff6ec7;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+  .header-contact a.contact-link:hover {
+    color: #fff;
+    text-shadow: 0 0 8px #c77dff;
+  }
+  @media (max-width: 700px) {
+    .header-flex {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.2rem 1vw 1rem 1vw;
+    }
+    .header-right {
+      align-items: flex-start;
+      margin-top: 0.7rem;
+    }
+    .header-left h1 {
+      font-size: 2rem;
+    }
+    .header-sub {
+      font-size: 1rem;
+    }
+  }
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: #fff;
+  transition: background 0.5s, color 0.5s;
+header {
+  background: linear-gradient(90deg, #6a0572 0%, #ab218b 50%, #1a1a2e 100%);
+  color: #fff;
+  padding: 2rem 0 1rem 0;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+header p {
+  margin: 0.5rem 0 0 0;
+  font-size: 1.2rem;
+}
+nav {
+  background: #0a0a0a;
+  box-shadow: 0 2px 8px rgba(171,33,139,0.10);
+  padding: 0.5rem 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1.2rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.2s, border-bottom 0.2s;
+  border-bottom: 2px solid transparent;
+}
+nav a.active, nav a:focus {
+  color: #ff6ec7;
+  border-bottom: 2px solid #ff6ec7;
+}
+nav a:hover {
+  color: #c77dff;
+  border-bottom: 2px solid #c77dff;
+}
+.container {
+  max-width: 950px;
+  margin: 2rem auto;
+  background: #111;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 2rem;
+  animation: fadeIn 1s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+section {
+  margin-bottom: 2.5rem;
+  padding: 1.2rem 1rem 1.5rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  background: #18111a;
+  transition: box-shadow 0.3s, background 0.3s;
+}
+section:hover {
+  box-shadow: 0 6px 24px rgba(0,123,182,0.10);
+  background: #2d133b;
+}
+h2 {
+  color: #ff6ec7;
+  border-bottom: 2px solid #c77dff;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+ul {
+  padding-left: 1.2rem;
+}
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  list-style: none;
+  padding: 0;
+}
+.skill-list li {
+  background: linear-gradient(90deg, #c77dff 0%, #ff6ec7 100%);
+  color: #fff;
+  border-radius: 5px;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  box-shadow: 0 1px 4px rgba(255,110,199,0.10);
+  transition: background 0.2s, transform 0.2s, color 0.2s;
+  cursor: pointer;
+}
+.skill-list li:hover {
+  background: linear-gradient(90deg, #fff 0%, #c77dff 100%);
+  color: #ab218b;
+  transform: scale(1.08);
+}
+.experience, .education, .course, .position {
+  margin-bottom: 1.5rem;
+  background: #1a1a2e;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  padding: 1rem 1.2rem;
+  transition: box-shadow 0.2s;
+  position: relative;
+}
+.experience:hover, .education:hover, .course:hover, .position:hover {
+  box-shadow: 0 4px 24px rgba(255,110,199,0.13);
+}
+footer {
+  text-align: center;
+  color: #bbb;
+  padding: 1.5rem 0 1rem 0;
+  font-size: 1rem;
+}
+.contact-link {
+  color: #ff6ec7;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.contact-link:hover {
+  color: #fff;
+  text-shadow: 0 0 8px #c77dff;
+}
+@media (max-width: 700px) {
+  .container {
+    padding: 1rem;
+  }
+  nav a {
+    margin: 0 0.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Collapsible Card Styles */
+.card-category {
+  background: linear-gradient(120deg, rgba(26,26,46,0.92) 60%, rgba(24,17,26,0.92) 100%);
+  color: #fff;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px 0 rgba(199,125,255,0.18), 0 1.5px 8px 0 rgba(255,110,199,0.10);
+  margin-bottom: 2.2rem;
+  cursor: pointer;
+  transition: box-shadow 0.3s, background 0.3s, transform 0.2s;
+  padding: 1.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+  border: 1.5px solid rgba(255,110,199,0.18);
+  perspective: 800px;
+}
+.card-category:hover {
+  box-shadow: 0 12px 48px 0 #ff6ec7, 0 2px 16px 0 #c77dff;
+  background: linear-gradient(120deg, rgba(45,19,59,0.98) 60%, rgba(26,26,46,0.98) 100%);
+  transform: translateY(-6px) scale(1.025) rotateY(2deg);
+  border: 2.5px solid #c77dff;
+  z-index: 2;
+}
+.card-category::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  pointer-events: none;
+  box-shadow: 0 0 32px 8px #c77dff44, 0 0 0 2px #ff6ec755;
+  opacity: 0.18;
+  z-index: 0;
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #ff6ec7;
+}
+.card-toggle {
+  font-size: 1.5rem;
+  color: #c77dff;
+  transition: transform 0.3s;
+}
+.card-category.open .card-toggle {
+  transform: rotate(90deg);
+  color: #ff6ec7;
+}
+.card-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  color: #fff;
+  transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.4s, color 0.2s;
+}
+.card-category.open .card-content {
+  max-height: 2000px;
+  opacity: 1;
+  margin-top: 1.2rem;
+  color: #fff;
+}
+}
