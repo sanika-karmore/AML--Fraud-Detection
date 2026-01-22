@@ -4,7 +4,7 @@
 
 ## Project Overview
 
-This project implements an end-to-end Anti-Money Laundering (AML) and fraud detection system using rule-based compliance logic, supervised machine learning, and unsupervised anomaly detection — exactly as implemented in tier-1 financial institutions.
+This project implements an end-to-end Anti-Money Laundering (AML) and fraud detection system using rule-based compliance logic, supervised machine learning, and unsupervised anomaly detection.
 
 ## Business Problem
 
@@ -126,5 +126,6 @@ Final Risk Score = 0.4 × Rule Score + 0.4 × ML Probability + 0.2 × Anomaly Sc
 
 **Status:** Under Development
 **Last Updated:** January 2026
+
 
 
